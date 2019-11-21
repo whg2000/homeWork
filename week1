@@ -1,0 +1,4 @@
+如果允许用regex test的网站的话，那就直接把文件内容复制粘贴，然后输入 \(\d*\)[a-z][\w*|-]{4,19} 就检索出来了
+
+如果非要写代码的话，C语言，先freopen("input.txt","r",stdin);读入name.txt，然后用regcomp()编译上面那个regex,
+用regexec()匹配并计数，regfree()释放，输出计数。。。
