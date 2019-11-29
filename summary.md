@@ -1,0 +1,4 @@
+# **SUMMARY OF ASSAY**
+This week I use some of my time reading the paper about slim gragh.Since I am a rookie,I just read abstract,introduction and conclusion. It's conception is somewhat too new to me,but I still have a little harvest.
+Slim graph,as the paper says,is a kind of programming model and framework for lossy graph compression.From my simple point of view,it is use to evaluate methods of slimming a huge gragh,and choose the best for different kinds of machine. In fact,I think it necessary to use this tool,as the graghs nowadays contains so much information and take up a lot of storage space.We daily use,however,not all of them to work,which brings waste in some way and that actually blocks the improvement of technology.
+In the future,Slim Graph is predict to be used in facilitating approximate graph processing,storage,and analytics.That can be popular,since storage is always a huge problem.
