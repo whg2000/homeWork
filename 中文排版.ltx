@@ -1,0 +1,77 @@
+ \documentclass[UTF8,11pt]{ctexart}
+\title{数学分析与线性代数例题}
+\author{佚名}
+\date{2019 年 12 月 6 日}
+\usepackage{geometry}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{CJK}
+\newtheorem{theorem}{定理}
+\geometry{left=2.3cm,right=2.3cm,top=2cm,bottom=5cm}
+\begin{document}
+\maketitle
+\tableofcontents
+\section{微分中值定理及其应用}
+\setlength{\parindent}{2em}
+
+\begin{theorem}[极值的第二充分条件]设 $f(x)$ 在 $(x_{0} -\delta,x_{0} + \delta)$ 可导且 $f'(x_{0}) = 0$，又 $f''(x_{0})$ 存在. 
+
+$1)$ 若 $f''(x_{0}) < 0$ ，则 $f(x_{0})$ 是严格极大值；
+
+$2)$ 若 $f''(x_{0}) > 0$ ，则 $f(x_{0})$ 是严格极小值. 
+\end{theorem}
+\paragraph{例 1}\emph { 求 $y = \frac{1}{3}x\sqrt{(x-5)^{2}}$ 的极值点与极值\footnote{原题摘自《数学分析简明教程》(上册)$P142$.}.}
+
+\paragraph{解 .} \emph{函数在 $(-\infty,+\infty)$ 上连续，当 $x \ne 5$ 时有 }
+
+\begin{displaymath}
+y' = \frac{1}{3}\Bigg((x-5)^{\frac{2}{3}} +\frac{2x}{3}(x-5)^{-\frac{1}{3}}\Bigg)= \frac{5(x-3)}{9(x-5)^{1/3}}. \eqno{(1)}
+\end{displaymath}
+\emph{令 $y_0 = 0$ 得稳定点 $x = 3$，现列表如下： }
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$x$&$(-\infty,3)$&$3$&$(3,5)$&$5$&$(5,+\infty)$\\
+\hline
+$y'$&$+$&$0$&$-$&\emph{不存在}&$+$\\
+\hline
+$y$&$\nearrow$&$\sqrt[3]{4}$&$\searrow$&$0$&$\nearrow$\\
+\hline
+\end{tabular}
+\end{center}
+\setlength{\parindent}{2em}
+
+\emph{从表中可见 $x = 3$ 是极大值点，极大值为 $f(3) = \sqrt[3]{4}$；$x = 5 $为极小值点，极小值为$ f(5) = 0$. 我 们可以大致地画出函数的图形，如图\ref{fig:function}所示.}
+
+\newpage
+
+\begin{figure}
+\centering
+\includegraphics[width=9cm]{function.pdf}
+\caption{$y=\frac{1}{3}x\sqrt[3]{(x-5)^2}$的函数图像}
+\label{fig:function}
+\end{figure}
+\section{行列式}
+\paragraph{例 $2$.} \emph{若 $a,b \in R^{+}$，求由方程为$\frac{x^{2}_{1}}{a^{2}}+\frac{x^{2}_{2}}{b^{2}}=1$的椭圆为边界的区域 E 的面积\footnote{原题摘自《线性代数及其应用》 （第三版）$P183$.}. }
+
+\paragraph{解.} \emph{断言 E 是单位圆盘 D 在线性变换 T 下的像. 这里 T 由矩阵 $A = \left[ \begin{array}{cc}a&0\\0&b\end{array}\right]$确定，这是因为若 $u =\left[\begin{array}{c}u_1\\u_2\end{array}\right]$，$x =\left[\begin{array}{c}x_1\\x_2\end{array}\right]$，且 $x = Au$，则}
+
+\begin{displaymath}
+u_{1}=\frac{x_{1}}{a},u_{2}=\frac{x_{2}}{b}
+\end{displaymath}
+\emph{从而得 u 在此单位圆内，即满足 $u^2_1 +u^2_2 \le 1$，当且仅当 x 在 E 内，即满足 $(x1/a)^2 +(x2/b)^2 \le 1$. 进 而 }
+
+\begin{center}
+   
+        \begin{align*}
+            \{ \text{椭圆的面积} \} &= \{ T(D)\text{的面积} \} \\
+                &= \vert detA \vert\cdot\{ \text{D的面积} \}\\
+                &= a \cdot b \cdot \pi\cdot(1)^2 \\
+                &= \pi \cdot a\cdot b
+        \end{align*}
+    
+\end{center}
+        
+
+\end{document}
